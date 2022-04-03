@@ -59,7 +59,7 @@
         <!--Герой-->
         <section class="hero "   >
             <h1 class="hero-title">Эффективные решения <br> для вашего бизнеса</h1>
-            <button type="button" class="button primary" >Заказать услугу</button>
+            <button type="button" class="button primary" data-modal-open >Заказать услугу</button>
         </section>
         <!--Преимущества-->
         
@@ -113,9 +113,25 @@
             <div class="container">
             <h2 class="section-title">Чем мы занимаемся</h2>
             <ul class="work list">
-                <li class="work-item"><img src="./images/img1.jpg" alt="Разметка html кода на компютере" width="370"> </li>
-                <li class="work-item"><img src="./images/img2.jpg" alt="Макет сайта на компютере" width="370"></li>
-                <li class="work-item"><img src="./images/img.jpg" alt="Подбор цвета для дизайна" width="370"></li>
+                <li class="work-item">
+                    <div class="work-item-thumb">
+                        <img src="./images/img1.jpg" alt="Разметка html кода на компютере" width="370"> 
+                        <p class="work-item-overlay">Десктопные приложения</p>
+                    </div>
+                </li>
+                <li class="work-item">
+                    <div class="work-item-thumb">
+                    <img src="./images/img2.jpg" alt="Макет сайта на компютере" width="370">
+                    <p class="work-item-overlay">Мобильные приложения</p>
+                    </div>
+                </li>
+                <li class="work-item">
+                    <div class="work-item-thumb">
+                    <img src="./images/img.jpg" alt="Подбор цвета для дизайна" width="370">
+                     <p class="work-item-overlay">Дизайнерские решения</p>
+     
+                    </div>
+                 </li>
             </ul>
             </div>
         </section>
@@ -331,6 +347,8 @@
          </ul>
     </div>
     </section>
+
+       
     </main>
 
 
@@ -379,7 +397,19 @@
                 </li>
             </ul>
         </div>
-        </div>
+        
+   
     </footer>
+
+            <div class="backdrop is-hidden" data-modal>
+                <div class="modal">
+                    <button class="modal-button" data-modal-close>
+                        <svg class="modal-button-close">
+                            <use href="./images/sprite.svg#button"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <script src="./js/modal.js"></script>
 </body>
 </html>
